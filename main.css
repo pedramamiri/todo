@@ -1,8 +1,9 @@
 body{
+    margin:0;
+}
+.container{
     display: flex;
     flex-direction: column;
-    margin:0;
-    padding: 0;
     
 }
 .header{
@@ -46,14 +47,25 @@ button{
         flex-direction: column;  
         text-align: center;
     }
-    .fname{
+    .idname{
         width: 60px;
     }
-    .lname{
+    .pass{
         width: 80px;
     }
-
-
-    
-    
+    .inlogad{
+        font-size: 10px;
+    }  
+}
+.content{
+    margin-top: 100px;
+}
+.inlogad{
+    margin:auto;
+    width: 60%;
+    height: 300px;
+    background-color: gainsboro;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 30px;   
 }
