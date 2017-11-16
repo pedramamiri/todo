@@ -1,0 +1,59 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    padding: 0;
+    
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    background-color: gainsboro;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    
+}
+.logo{
+    padding-left: 5px;
+    
+}
+.header a{
+    text-decoration: none;
+    color:black;
+}
+.header h2:hover{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgba(0, 0, 0, 0.493);
+}
+.info{
+    padding-right: 5px;
+}
+button{
+    background-color: black;
+    color: rgba(245, 245, 245, 0.938);
+    cursor: pointer;
+    border: none;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+}
+@media screen and (max-width: 630px) {
+    .header{
+        display: flex;
+        flex-direction: column;  
+        text-align: center;
+    }
+    .fname{
+        width: 60px;
+    }
+    .lname{
+        width: 80px;
+    }
+
+
+    
+    
+}
