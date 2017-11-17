@@ -4,7 +4,7 @@
     sessionStorage.situ;
     $(".dropdown").hide();
     $(".forgotPass").hide();
-    if (sessionStorage.situ !=="in" || sessionStorage.situ == null){
+    if (sessionStorage.situ !=="in"){
      $(".klik").click(function(){
         if (sessionStorage.myId == $(".idname").val() && sessionStorage.myPass == $(".passw").val()) {
         $(".inlogad").hide();
@@ -21,6 +21,12 @@
     else{
         $(".dropdown").show();
     }
+    $(".lOut").click(function(){
+        location.reload();  
+        sessionStorage.situ = "out";
+
+    });
+
     //link ke safheye my page ra baz konad
     //yek like logout
     //pak kardane in az situ
