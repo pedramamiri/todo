@@ -15,6 +15,7 @@ body{
     position: fixed;
     width: 100%;
     
+    
 }
 .logo{
     padding-left: 5px;
@@ -29,9 +30,12 @@ body{
     color:rgba(0, 0, 0, 0.493);
 }
 .info{
-    padding-right: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
 }
-button{
+.klik{
     background-color: black;
     color: rgba(245, 245, 245, 0.938);
     cursor: pointer;
@@ -41,7 +45,10 @@ button{
     border-radius: 5px;
     padding: 5px;
 }
-@media screen and (max-width: 630px) {
+p{
+    padding: 5px;
+}
+@media screen and (max-width: 650px) {
     .header{
         display: flex;
         flex-direction: column;  
@@ -50,15 +57,17 @@ button{
     .idname{
         width: 60px;
     }
-    .pass{
+    .passw{
         width: 80px;
     }
     .inlogad{
         font-size: 10px;
-    }  
+    }
+   
 }
+
 .content{
-    margin-top: 100px;
+    margin-top: 140px;
 }
 .inlogad{
     margin:auto;
@@ -68,4 +77,44 @@ button{
     border-radius: 5px;
     text-align: center;
     padding-top: 30px;   
+}
+.dropbtn {
+    background-color: black;
+    color: rgba(245, 245, 245, 0.938);
+    padding: 5px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+.plus{
+    padding: 5px;
+}
+.dropdown {
+    padding: 5px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 15px 10px;
+    text-decoration: none;
+    display: block;
+    
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropbtn:hover{
+    background-color: #ff0000;
 }

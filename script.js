@@ -3,11 +3,12 @@
     sessionStorage.myPass = "password";
     sessionStorage.situ;
     if (sessionStorage.situ !=="in" || sessionStorage.situ == null){
-     $(".klik").click(function(){
+     $(".gheyb").click(function(){
         if (sessionStorage.myId == $(".idname").val() && sessionStorage.myPass == $(".passw").val()) {
         $(".inlogad").hide();
         console.log("yesss");
-        sessionStorage.situ = "in"
+        //sessionStorage.situ = "in"
+
 
         
 

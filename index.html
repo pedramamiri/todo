@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>TODO</title>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8">  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
@@ -15,11 +15,23 @@
       </div>
 
       <div class="info">
-        ID : <input class="idname" type="text">
-        Password : <input class="passw" type="text">
-        <button class="klik">Submit!</button>
+        <p>ID :</p><input class="idname" type="text">
+        <p>Password :</p><input class="passw" type="text">
+        
+        <div class="dropdown">
+            <button class="dropbtn">my page</button>
+            <div class="dropdown-content">
+              <a class="myList" href="#">My page</a>
+              <a class="out" href="#">Logout</a>  
+            </div>
+        </div>
+
+        <div class="plus">
+            <button class="klik">Submit!</button>  
+        </div>
+        
       </div>
-      
+       
     </div>
 
     <div class="content">
