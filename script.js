@@ -3,15 +3,23 @@
     sessionStorage.myPass = "password";
     sessionStorage.situ;
     $(".dropdown").hide();
+    $(".forgotPass").hide();
     if (sessionStorage.situ !=="in" || sessionStorage.situ == null){
      $(".klik").click(function(){
         if (sessionStorage.myId == $(".idname").val() && sessionStorage.myPass == $(".passw").val()) {
         $(".inlogad").hide();
-        console.log("yesss");
+        $(".forgotPass").hide();
         $(".dropdown").show();
         sessionStorage.situ = "in"
+        }
+        else{
+        $(".inlogad").hide();
+        $(".forgotPass").show();
         }     
      });
+    }
+    else{
+        $(".dropdown").show();
     }
     //link ke safheye my page ra baz konad
     //yek like logout

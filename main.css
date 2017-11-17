@@ -118,3 +118,13 @@ p{
 .dropbtn:hover{
     background-color: #ff0000;
 }
+.forgotPass{
+    margin:auto;
+    width: 60%;
+    height: 300px;
+    background-color: gainsboro;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 30px;  
+
+}
