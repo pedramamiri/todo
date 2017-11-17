@@ -4,12 +4,15 @@ body{
 .container{
     display: flex;
     flex-direction: column;
-    
+    min-height: 1000px;
+    background-image: url("https://images.vexels.com/media/users/2432/70041/raw/571be51846fc4a2f952f75be8b23dccc-blue-background-with-blurry-bokeh-bubbles.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .header{
     display: flex;
     flex-direction: row;
-    background-color: gainsboro;
+    background-color: rgba(59, 56, 56, 0.212);
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -23,11 +26,11 @@ body{
 }
 .header a{
     text-decoration: none;
-    color:black;
+    color:whitesmoke;
 }
 .header h2:hover{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:rgba(0, 0, 0, 0.493);
+    color:rgba(255, 255, 255, 0.884);
 }
 .info{
     display: flex;
@@ -48,7 +51,7 @@ body{
 p{
     padding: 5px;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 680px) {
     .header{
         display: flex;
         flex-direction: column;  
@@ -73,7 +76,7 @@ p{
     margin:auto;
     width: 60%;
     height: 300px;
-    background-color: gainsboro;
+    background-color: rgba(59, 56, 56, 0.212);
     border-radius: 5px;
     text-align: center;
     padding-top: 30px;   
@@ -116,7 +119,7 @@ p{
     display: block;
 }
 .dropbtn:hover{
-    background-color: #ff0000;
+    background-color:rgba(161, 161, 255, 0.836);
 }
 .forgotPass{
     margin:auto;
@@ -126,5 +129,12 @@ p{
     border-radius: 5px;
     text-align: center;
     padding-top: 30px;  
-
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color:rgba(59, 56, 56, 0.212);
 }

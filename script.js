@@ -24,12 +24,13 @@
     $(".lOut").click(function(){
         location.reload();  
         sessionStorage.situ = "out";
-
     });
 
+    
+    
+    
+    
     //link ke safheye my page ra baz konad
-    //yek like logout
-    //pak kardane in az situ
     //save kardane punkt ha va namayesh dadane anha
 });
 
