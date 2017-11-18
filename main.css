@@ -66,6 +66,10 @@ p{
     .inlogad{
         font-size: 10px;
     }
+    .time{
+        font-size: 0px;
+        visibility: hidden;
+    }
    
 }
 
@@ -125,16 +129,48 @@ p{
     margin:auto;
     width: 60%;
     height: 300px;
-    background-color: gainsboro;
+    background-color:rgba(59, 56, 56, 0.212);
     border-radius: 5px;
     text-align: center;
     padding-top: 30px;  
 }
 .footer{
+    display: flex;
+    flex-direction: row;
     position: fixed;
+    justify-content: center;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 60px;
     background-color:rgba(59, 56, 56, 0.212);
+}
+.already{
+    margin:auto;
+    width: 60%;
+    height: 300px;
+    background-color:rgba(59, 56, 56, 0.212);
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 30px;
+}
+.time{
+    padding-right: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+}
+.footer>div{
+    margin:10px;  
+    width: 80px;
+    line-height: 50px;
+    background-color: rgba(59, 56, 56, 0.658);
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.footer>div:hover{
+    background-color: black;
+}
+.footer>div a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
 }
