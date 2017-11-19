@@ -37,14 +37,30 @@ $(document).ready(function(){
         $(".already").hide();
     
     });
+   
+   var stuffToDo = [
+   "Klipp gräset", 
+   "Betala räkningar",
+   "Köp mjölk", 
+   "Spika upp tavlor",
+   "helsa hem till mamma",
+   "ladda busskort",
+   "tvätta kläder"
+   ];
+   var json_str = JSON.stringify(stuffToDo);
+   localStorage.dolist = json_str; 
+   myToDoList = JSON.parse(localStorage.dolist);
+   var output ="";
+   for (var i in myToDoList){ 
+       output += "<li>" + myToDoList[i] + "</li>" ;
+   }
+   $(".showYourList").html(output);
 
+    
+    
 
-    //var stuffToDo = [
-    //    "Klipp gräset", 
-      //  "Betala räkningar",
-        //"Köp mjölk", 
-        //"Spika upp tavlor"
-       // ];
+    
+
 
 
 
