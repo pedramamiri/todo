@@ -56,6 +56,20 @@ $(document).ready(function(){
    }
    $(".showYourList").html(output);
 
+
+   $( "li" ).click(function(){
+    $( this ).hide( 2000) 
+    var  removeitem = $(this).text();
+    stuffToDo.splice($.inArray(removeitem, stuffToDo),1);
+    console.log(stuffToDo);
+   });
+   
+
+       
+   
+  
+
+
     
     
 
