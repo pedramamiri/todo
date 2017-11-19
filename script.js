@@ -3,20 +3,21 @@ $(document).ready(function(){
     sessionStorage.myId = "test";
     sessionStorage.myPass = "password";
     sessionStorage.situ;
-    
     $(".dropdown").hide();
-    $(".forgotPass").hide();
-    $(".already").hide();
+    $(".forgotPass").css("display", "none");
+    $(".already").css("display", "none");
+    $(".list").css("display", "none");
     if (sessionStorage.situ !=="in"){
      $(".klik").click(function(){
         if (sessionStorage.myId == $(".idname").val() && sessionStorage.myPass == $(".passw").val()) {
-        $(".inlogad").hide();
-        $(".forgotPass").hide();
+        $(".inlogad").css("display", "none");
+        $(".forgotPass").css("display", "none");
         $(".dropdown").show();
+        $(".list").show();
         sessionStorage.situ = "in"
         }
         else{
-        $(".inlogad").hide();
+        $(".inlogad").css("display", "none");
         $(".forgotPass").show();
         }     
      });
@@ -24,13 +25,30 @@ $(document).ready(function(){
     else{
         $(".dropdown").show();
         $(".already").show();
-        $(".inlogad").hide();
+        $(".inlogad").css("display", "none");
 
     }
     $(".lOut").click(function(){
         location.reload();  
         sessionStorage.situ = "out";
     });
+    $(".myList").click(function(){
+        $(".list").show();
+        $(".already").hide();
+    
+    });
+
+
+    //var stuffToDo = [
+    //    "Klipp gräset", 
+      //  "Betala räkningar",
+        //"Köp mjölk", 
+        //"Spika upp tavlor"
+       // ];
+
+
+
+
 
     var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
     var t = new Date(); 
@@ -44,6 +62,8 @@ $(document).ready(function(){
     $(".time").append(datetime);
 
 });
+
+
 
 
 
