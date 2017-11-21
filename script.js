@@ -37,7 +37,7 @@ $(document).ready(function(){
         $(".already").hide();
     
     });
-   
+
    var stuffToDo = [
    "Klipp gräset", 
    "Betala räkningar",
@@ -47,37 +47,32 @@ $(document).ready(function(){
    "ladda busskort",
    "tvätta kläder"
    ];
+
+   //sessionStorage.pedi;
+   //if ( sessionStorage.pedi !=="in"){
+  
    var json_str = JSON.stringify(stuffToDo);
    localStorage.dolist = json_str; 
    myToDoList = JSON.parse(localStorage.dolist);
+ 
+   // console.log("hello"); 
+  // sessionStorage.pedi = "in";
+   //}
+
    var output ="";
-   for (var i in myToDoList){ 
+   for (var i in myToDoList ){ 
        output += "<li>" + myToDoList[i] + "</li>" ;
    }
    $(".showYourList").html(output);
-
-
+  
    $( "li" ).click(function(){
     $( this ).hide( 2000) 
     var  removeitem = $(this).text();
-    stuffToDo.splice($.inArray(removeitem, stuffToDo),1);
-    console.log(stuffToDo);
+
+    //JSON.parse(localStorage.dolist).splice($.inArray(removeitem,JSON.parse(localStorage.dolist)),1);
+   // console.log(myToDoList);
    });
-   
-
-       
-   
-  
-
-
-    
-    
-
-    
-
-
-
-
+  // console.log(JSON.parse(localStorage.dolist));
 
 
     var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
