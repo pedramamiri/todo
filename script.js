@@ -52,7 +52,8 @@ $(document).ready(function(){
    ];
 
    //loop för att fixa myToDoList
-   if ( localStorage.changeList == "steg1"){
+
+   if ( localStorage.changeList == "steg1" || localStorage.changeList == null ){
    var json_str = JSON.stringify(stuffToDo);
    localStorage.dolist = json_str;   
    myToDoList = JSON.parse(localStorage.dolist);
@@ -90,9 +91,6 @@ $(document).ready(function(){
     location.reload();
     localStorage.changeList = "steg1";
    });
-
-
-
 
     // tid och datum
     var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
