@@ -48,16 +48,20 @@ $(document).ready(function(){
    "tvätta kläder"
    ];
 
-   //sessionStorage.pedi;
-   //if ( sessionStorage.pedi !=="in"){
-  
+   //localStorage.doList;
+   if ( localStorage.changeList == null){
    var json_str = JSON.stringify(stuffToDo);
-   localStorage.dolist = json_str; 
+   localStorage.dolist = json_str;
+   // det ska gå efter if och kanske i en else 
    myToDoList = JSON.parse(localStorage.dolist);
  
    // console.log("hello"); 
   // sessionStorage.pedi = "in";
-   //}
+   }
+   else{
+    myToDoList = JSON.parse(localStorage.changeList);
+   }
+
 
    var output ="";
    for (var i in myToDoList ){ 
@@ -69,10 +73,13 @@ $(document).ready(function(){
     $( this ).hide( 2000) 
     var  removeitem = $(this).text();
 
-    //JSON.parse(localStorage.dolist).splice($.inArray(removeitem,JSON.parse(localStorage.dolist)),1);
-   // console.log(myToDoList);
+    myToDoList.splice($.inArray(removeitem,myToDoList),1);
+    var json_str = JSON.stringify(myToDoList);
+    localStorage.changeList = JSON.stringify(myToDoList);
+    console.log(myToDoList);
    });
   // console.log(JSON.parse(localStorage.dolist));
+  
 
 
     var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
