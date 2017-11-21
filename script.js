@@ -1,4 +1,4 @@
-
+// main loop
 $(document).ready(function(){
     sessionStorage.myId = "test";
     sessionStorage.myPass = "password";
@@ -14,6 +14,7 @@ $(document).ready(function(){
         $(".forgotPass").css("display", "none");
         $(".dropdown").show();
         $(".list").show();
+        myFunction();
         sessionStorage.situ = "in"
         }
         else{
@@ -26,8 +27,9 @@ $(document).ready(function(){
         $(".dropdown").show();
         $(".already").show();
         $(".inlogad").css("display", "none");
-
     }
+
+    // logga ut och my list function
     $(".lOut").click(function(){
         location.reload();  
         sessionStorage.situ = "out";
@@ -35,9 +37,10 @@ $(document).ready(function(){
     $(".myList").click(function(){
         $(".list").show();
         $(".already").hide();
+        myFunction()
     
     });
-
+   // first todo list 
    var stuffToDo = [
    "Klipp gräset", 
    "Betala räkningar",
@@ -48,40 +51,50 @@ $(document).ready(function(){
    "tvätta kläder"
    ];
 
-   //localStorage.doList;
-   if ( localStorage.changeList == null){
+   //loop för att fixa myToDoList
+   if ( localStorage.changeList == "steg1"){
    var json_str = JSON.stringify(stuffToDo);
-   localStorage.dolist = json_str;
-   // det ska gå efter if och kanske i en else 
+   localStorage.dolist = json_str;   
    myToDoList = JSON.parse(localStorage.dolist);
- 
-   // console.log("hello"); 
-  // sessionStorage.pedi = "in";
    }
    else{
     myToDoList = JSON.parse(localStorage.changeList);
    }
 
-
+   // funktion för visa eller ta bort verje variabel i array
+   function myFunction() {       
    var output ="";
    for (var i in myToDoList ){ 
        output += "<li>" + myToDoList[i] + "</li>" ;
    }
-   $(".showYourList").html(output);
-  
+   $(".showYourList").html(output);  
    $( "li" ).click(function(){
     $( this ).hide( 2000) 
-    var  removeitem = $(this).text();
-
+    var  removeitem = $(this).text();    
     myToDoList.splice($.inArray(removeitem,myToDoList),1);
-    var json_str = JSON.stringify(myToDoList);
     localStorage.changeList = JSON.stringify(myToDoList);
     console.log(myToDoList);
    });
-  // console.log(JSON.parse(localStorage.dolist));
-  
+}
+
+   // pusha en ny variabel
+   $( ".Add" ).click(function(){
+    myToDoList.push($(".newItem").val())
+    myFunction()
+    localStorage.changeList = JSON.stringify(myToDoList);
+    console.log(myToDoList);
+   });
+   
+   // återställa hela array till första situation
+   $( ".resetAllt" ).click(function(){
+    location.reload();
+    localStorage.changeList = "steg1";
+   });
 
 
+
+
+    // tid och datum
     var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
     var t = new Date(); 
     var datetime = "Date: " + days[t.getDay()] + " - " 
